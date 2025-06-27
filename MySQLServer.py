@@ -11,7 +11,7 @@ password = "your Password"
 def connectToDB(user, host, password):
     try:
         myConnector = mysql.connector.connect(user=user, host=host, password=password)
-    except Exception as e:
+    except mysql.connector.Error as e:
         print("exception here", e)
         return None
     else:
@@ -40,7 +40,7 @@ def splitSQLScript(mySQLScript):
 def executeCommands(command, connecterOBJ ,cursorOBJ):
     try:
         cursorOBJ.execute(command)
-    except Exception as e:
+    except mysql.connector.Error as e:
         print(f"Failed to execute:\n{command}\nError: {e}\n")
         return False
     else:
