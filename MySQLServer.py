@@ -5,6 +5,9 @@ host = "your host"
 user = "your user"
 password = "your Password"
 
+
+
+# "CREATE DATABASE IF NOT EXISTS alx_book_store"
 def connectToDB(user, host, password):
     try:
         myConnector = mysql.connector.connect(user=user, host=host, password=password)
