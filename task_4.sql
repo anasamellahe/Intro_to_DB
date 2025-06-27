@@ -1,2 +1,3 @@
 USE alx_book_store;
-DESC Books;
+
+SHOW COLUMNS FROM alx_book_store.Books
